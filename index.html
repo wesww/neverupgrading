@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Never Upgrading</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      -webkit-box-shadow: inset 0px 0px 56px -8px rgba(0,0,0,0.75);
+      -moz-box-shadow: inset 0px 0px 56px -8px rgba(0,0,0,0.75);
+      box-shadow: inset 0px 0px 56px -8px rgba(0,0,0,0.75);
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      margin: 0;
+    }
+    .never-logo {
+      width: 50%;
+      margin: 35px auto;
+      display: block;
+    }
+    .never-slogan {
+      text-align: center;
+      font-size: 24px;
+    }
+  </style>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <img src="never-upgrading.png" alt="Never Upgrading Logo" class="never-logo">
+  <div class="never-slogan"></div>
+</body>
+<script>
+(function(){
+  'use strict';
+  function vapidSlogan(){
+    var a = ['Ability', 'Awareness', 'Expertise', 'Insight', 'Judgment', 'Know-how', 'Knowledge', 'Proficiency'];
+    var b = ['area', 'field', 'place', 'point', 'position', 'seat', 'spot', 'vicinity', 'zone'];
+    var c = ['application', 'commitment', 'demand', 'exigency', 'need', 'urgency', 'use'];
+    var slogan = a[Math.floor(Math.random() * a.length)] +
+      ' at the ' +
+      b[Math.floor(Math.random() * b.length)] +
+      ' of ' +
+      c[Math.floor(Math.random() * c.length)] +
+      '.';
+    return slogan;
+  }
+  function setSlogan(){
+    var el = document.getElementsByClassName('never-slogan');
+    el[0].innerHTML = vapidSlogan();
+  }
+  setSlogan();
+  setInterval(function(){
+    setSlogan();
+  }, 2500);
+})();
+</script>
+</html>
