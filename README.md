@@ -1,2 +1,2 @@
 # neverupgrading
-neverupgrading.com
+http://neverupgrading.com
